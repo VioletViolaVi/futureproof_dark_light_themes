@@ -1,13 +1,35 @@
 /**************************************************** custom default */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-  }
-  
-  body {
-    cursor: default;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #f5f5dc;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  cursor: default;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #f5f5dc;
+}
+
+/**************************************************** btns */
+.btn-bg {
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  margin-top: 65%;
+}
+
+.btn-bg button {
+  outline: none;
+  border: #dcdcdc solid 0.2rem;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.btn-bg button:hover {
+  border-width: 0.5rem;
+  font-weight: 900;
+}
