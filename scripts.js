@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnArr = [dark, light];
 
     btnArr.forEach((singleBtn) => {
+      // clicking on either btn
       singleBtn.addEventListener("click", () => {
         if (singleBtn === dark) {
           bodyBg.classList.remove("light-colour");
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // swap btn
     const swap = document.getElementById("swap");
 
+    // clicking on swap btn
     swap.addEventListener("click", () => {
       if (bodyBg.classList.contains("dark-colour")) {
         bodyBg.classList.remove("dark-colour");

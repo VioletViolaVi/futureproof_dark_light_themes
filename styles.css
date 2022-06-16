@@ -17,11 +17,10 @@ body {
   display: grid;
   grid-template-columns: auto;
   justify-items: center;
-  margin-top: 65%;
+  margin-top: 15rem;
 }
 
 .btn-bg button {
-  outline: none;
   border: #dcdcdc solid 0.2rem;
   margin: 1rem;
   padding: 1rem;
@@ -30,10 +29,37 @@ body {
 }
 
 .btn-bg button:hover {
-  border-width: 0.5rem;
-  font-weight: 900;
+  border-width: 0.3rem;
+  border-color: #ffdf00;
 }
 
+@media (min-width: 600px) {
+  .btn-bg {
+    margin-top: 11rem;
+  }
+
+  .btn-bg button {
+    border-width: 0.3rem;
+    margin: 2rem;
+    font-size: 2rem;
+  }
+
+  .btn-bg button:hover {
+    border-width: 0.4rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .btn-bg {
+    grid-template-columns: 21rem 21rem 13rem;
+    margin-top: 19rem;
+    justify-content: center;
+  }
+
+  .btn-bg button {
+    font-size: 2.5rem;
+  }
+}
 /**************************************************** toggle colours */
 
 .light-colour {
