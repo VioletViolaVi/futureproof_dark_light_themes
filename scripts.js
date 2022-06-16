@@ -2,21 +2,23 @@ document.addEventListener("DOMContentLoaded", () => {
   // body bg
   const bodyBg = document.getElementById("bodyBg");
 
-  // btns
-  const dark = document.getElementById("dark");
-  const light = document.getElementById("light");
-  const swap = document.getElementById("swap");
-
-  const btnArr = [dark, light];
-
   // toggle dark & light
   function toggleDarkAndLight() {
+    // btns
+    const dark = document.getElementById("dark");
+    const light = document.getElementById("light");
+
+    // btns arr
+    const btnArr = [dark, light];
+
     btnArr.forEach((singleBtn) => {
       singleBtn.addEventListener("click", () => {
         if (singleBtn === dark) {
-          bodyBg.style.backgroundColor = "#232b2b";
+          bodyBg.classList.remove("light-colour");
+          bodyBg.classList.add("dark-colour");
         } else if (singleBtn === light) {
-          bodyBg.style.backgroundColor = "#f5f5dc";
+          bodyBg.classList.remove("dark-colour");
+          bodyBg.classList.add("light-colour");
         }
       });
     });
@@ -25,8 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // toggle swap
   function toggleSwap() {
+    // swap btn
+    const swap = document.getElementById("swap");
+
     swap.addEventListener("click", () => {
-      console.log("it's swap");
+      if (bodyBg.classList.contains("dark-colour")) {
+        bodyBg.classList.remove("dark-colour");
+        bodyBg.classList.add("light-colour");
+      } else {
+        bodyBg.classList.remove("light-colour");
+        bodyBg.classList.add("dark-colour");
+      }
     });
   }
   toggleSwap();

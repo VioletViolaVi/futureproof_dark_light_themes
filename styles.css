@@ -33,3 +33,13 @@ body {
   border-width: 0.5rem;
   font-weight: 900;
 }
+
+/**************************************************** toggle colours */
+
+.light-colour {
+  background-color: #f5f5dc;
+}
+
+.dark-colour {
+  background-color: #232b2b;
+}
