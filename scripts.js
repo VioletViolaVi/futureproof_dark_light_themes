@@ -7,21 +7,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const light = document.getElementById("light");
   const swap = document.getElementById("swap");
 
-  const btnArr = [dark, light, swap];
+  const btnArr = [dark, light];
 
-  // toggling themes
-  function togglingBtns() {
+  // toggle dark & light
+  function toggleDarkAndLight() {
     btnArr.forEach((singleBtn) => {
       singleBtn.addEventListener("click", () => {
         if (singleBtn === dark) {
           bodyBg.style.backgroundColor = "#232b2b";
         } else if (singleBtn === light) {
           bodyBg.style.backgroundColor = "#f5f5dc";
-        } else {
-          console.log("it's swap");
         }
       });
     });
   }
-  togglingBtns();
+  toggleDarkAndLight();
+
+  // toggle swap
+  function toggleSwap() {
+    swap.addEventListener("click", () => {
+      console.log("it's swap");
+    });
+  }
+  toggleSwap();
 });
